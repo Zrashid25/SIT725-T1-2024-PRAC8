@@ -1,11 +1,11 @@
 let client = require('../dbConnection');
-let collection = client.db('test').collection('Cats');
+let collection = client.db('test').collection('Cat');
 
 const insertCat = (cat, callback) => {
     collection.insertOne(cat, callback);
 }
 
-const getCats = (callback) => {
+const getCat = (callback) => {
     collection.find().toArray(callback);
 }
 
@@ -13,4 +13,4 @@ const deleteCat = (cat, callback) => {
     collection.deleteOne(cat, callback);
 }
 
-module.exports = {insertCat, getCats, deleteCat}
+module.exports = {insertCat, getCat, deleteCat}

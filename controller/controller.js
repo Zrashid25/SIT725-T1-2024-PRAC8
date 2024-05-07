@@ -22,7 +22,7 @@ const remove = (req, res) => {
     });
 };
 
-const getAllCats = (req, res) => {
+const getAllCat = (req, res) => {
     model.getCats((error, result) => {
         if(error) {
             res.json({statusCode: 400, message: error});
@@ -32,4 +32,4 @@ const getAllCats = (req, res) => {
     });
 }
 
-module.exports = {insertCat, getAllCats, remove}
+module.exports = {insertCat, getAllCat, remove}
